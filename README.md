@@ -8,15 +8,15 @@ spring-boot2整合RocketMQ4.4
   > cd rocketmq-all-4.4.0/
   > mvn -Prelease-all -DskipTests clean install -U
 ```
-进入distribution/target目录，拷贝程序，楼主这边是linux下同所以把apache-rocketmq.tar.gz上传到服务器
+进入distribution/target目录，拷贝程序，楼主这边是linux版本，所以把apache-rocketmq.tar.gz上传到服务器
   解压之后
-  执行Start Name Server
+  启动 Name Server
 ```
   > nohup sh bin/mqnamesrv &
   > tail -f ~/logs/rocketmqlogs/namesrv.log
   The Name Server boot success...
 ```
-  启动Start Broker
+  启动 Broker
 ```
   > nohup sh bin/mqbroker -n localhost:9876 &
   > tail -f ~/logs/rocketmqlogs/broker.log 
